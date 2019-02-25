@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+body > div {
+  display: flex;
+  justify-content: center;
+}
+#roundPlayer{
+  margin-top: 50px;
+  font-size: 3rem;
+  font-family: fantasy;
+}
+table {
+  width: 500px;
+  height: 500px;
+}
+table td {
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-size: 100px;
+  font-family: fantasy;
+  cursor: pointer;
+}
+
+table tr:nth-child(1) td:nth-child(n) {
+  border-top: none;
+}
+table tr:nth-child(n) td:nth-child(3) {
+  border-right: none;
+}
+table tr:nth-child(3) td:nth-child(n) {
+  border-bottom: none;
+}
+table tr:nth-child(n) td:nth-child(1) {
+  border-left: none;
+}
