@@ -84,7 +84,7 @@ class TicTacToe {
     }
     return false
   }
-  minmax (board, player) {
+  minmax (board, player, depth = 0) {
     // On copy le tableau afin de ne pas modifier la référence
     // board = [...board]
     const emptyCells = this.getEmptyCells(board)
@@ -106,10 +106,10 @@ class TicTacToe {
       // humain else IA
       let score
       if (player === 'O') {
-        score = this.minmax(board, 'X')
+        score = this.minmax(board, 'X', ++depth)
         oScore.score = score.score
       } else {
-        score = this.minmax(board, 'O')
+        score = this.minmax(board, 'O', ++depth)
         oScore.score = score.score
       }
       tScores.push(oScore)
